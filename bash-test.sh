@@ -10,4 +10,16 @@ else
     exit 1
 fi
 
+echo -e "Test error is thrown when not given number\n"
+
+java Dec2Hex
+
+if [ $? -ne 0 ]
+then
+    echo -e "\nTest Pass!\n"
+else
+    echo "Expected error was not thrown."
+    exit 1
+fi
+
 echo -e "\nAll tests passed!"
